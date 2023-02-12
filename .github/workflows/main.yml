@@ -48,7 +48,7 @@ jobs:
            sudo cd .. && cp h/* /usr/include/ -rf
            sudo chmod 777 *
            sudo clang -v
-           sudo make O=out ARCH=arm64 CC=clang CLANG_TARIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu- -j8 alioth_defconfig
+           sudo make O=out ARCH=arm64 CC=clang CLANG_TARIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu- -j8 vendor/arrow_alioth_defconfig
            sudo make CONFIG_SECTION_MISMATCH_WARN_ONLY=y O=out ARCH=arm64 CC=clang CLANG_TARIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu- -j8
       - uses: actions/upload-artifact@v3
         with:
